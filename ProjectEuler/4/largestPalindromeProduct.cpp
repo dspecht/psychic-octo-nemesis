@@ -37,13 +37,6 @@ void main()
                     printf("\nIs palidrome: %d\n", totalproduct);
                 if(totalproduct > largerstPalindrome) {largerstPalindrome = totalproduct;}
             }
-
-            productArray[0] = 0;
-            productArray[1] = 0;
-            productArray[2] = 0;
-            productArray[3] = 0;
-            productArray[4] = 0;
-            productArray[5] = 0;
         }
     }
 

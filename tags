@@ -6,19 +6,13 @@
 !_TAG_PROGRAM_VERSION	5.8	//
 MAX	.\ProjectEuler\1\multiplesof3and5.cpp	/^int MAX = 1000;$/;"	v
 MAX	.\ProjectEuler\2\evenFibonaccinumbers.cpp	/^unsigned int MAX = 4000000; \/\/ 4 Million$/;"	v
-checkFactorizationCorrect	.\ProjectEuler\3\largestPrimeFactor.cpp	/^bool checkFactorizationCorrect()$/;"	f
 currentFoundFib	.\ProjectEuler\2\evenFibonaccinumbers.cpp	/^unsigned int currentFoundFib = 0;$/;"	v
-factors	.\ProjectEuler\3\largestPrimeFactor.cpp	/^int factors[512] = {0};$/;"	v
 fibNum1	.\ProjectEuler\2\evenFibonaccinumbers.cpp	/^unsigned int fibNum1 = 0;$/;"	v
 fibNum2	.\ProjectEuler\2\evenFibonaccinumbers.cpp	/^unsigned int fibNum2 = 1;$/;"	v
-largestPrimeFactor	.\ProjectEuler\3\largestPrimeFactor.cpp	/^int largestPrimeFactor = 1;$/;"	v
 main	.\ProjectEuler\1\multiplesof3and5.cpp	/^void main()$/;"	f
 main	.\ProjectEuler\2\evenFibonaccinumbers.cpp	/^void main()$/;"	f
-main	.\ProjectEuler\3\LPFtry2.cpp	/^int main()$/;"	f
-main	.\ProjectEuler\3\largestPrimeFactor.cpp	/^void main()$/;"	f
-numberOfFactorsFound	.\ProjectEuler\3\largestPrimeFactor.cpp	/^int numberOfFactorsFound = 1;$/;"	v
-numberToFactor	.\ProjectEuler\3\largestPrimeFactor.cpp	/^int numberToFactor = 225;$/;"	v
-primeFactorList	.\ProjectEuler\3\largestPrimeFactor.cpp	/^int primeFactorList[25] = {2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,58,61,67,71,73,79,83,89,97};\/\/ Prime factors 1 - 100$/;"	v
+main	.\ProjectEuler\3\LargestPrimeFactor.cpp	/^int main()$/;"	f
+main	.\ProjectEuler\4\largestPalindromeProduct.cpp	/^void main()$/;"	f
 searchMultiplesof	.\ProjectEuler\1\multiplesof3and5.cpp	/^int searchMultiplesof[] = {3, 5}; \/\/ maybe do seperate vars for each?$/;"	v
 sum	.\ProjectEuler\1\multiplesof3and5.cpp	/^int sum = 0;$/;"	v
 totalSum	.\ProjectEuler\2\evenFibonaccinumbers.cpp	/^unsigned int totalSum = 0;$/;"	v

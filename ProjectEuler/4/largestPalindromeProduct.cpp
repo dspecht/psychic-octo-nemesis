@@ -11,9 +11,9 @@ void main()
     unsigned int productArray[6] = {0};
     unsigned int largerstPalindrome = 0;
 
-    for(int i = 999; i > 0; i--)
+    for(int i = 999; i > 100; i--)
     {
-        for(int j = 100; j < 1000; j++)
+        for(int j = 101; j < 1000; j++)
         {
 
             totalproduct = i * j;

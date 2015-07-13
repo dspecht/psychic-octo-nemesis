@@ -14,6 +14,7 @@ fibNum2	.\ProjectEuler\2\evenFibonaccinumbers.cpp	/^unsigned int fibNum2 = 1;$/;
 largestPrimeFactor	.\ProjectEuler\3\largestPrimeFactor.cpp	/^int largestPrimeFactor = 1;$/;"	v
 main	.\ProjectEuler\1\multiplesof3and5.cpp	/^void main()$/;"	f
 main	.\ProjectEuler\2\evenFibonaccinumbers.cpp	/^void main()$/;"	f
+main	.\ProjectEuler\3\LPFtry2.cpp	/^int main()$/;"	f
 main	.\ProjectEuler\3\largestPrimeFactor.cpp	/^void main()$/;"	f
 numberOfFactorsFound	.\ProjectEuler\3\largestPrimeFactor.cpp	/^int numberOfFactorsFound = 1;$/;"	v
 numberToFactor	.\ProjectEuler\3\largestPrimeFactor.cpp	/^int numberToFactor = 225;$/;"	v

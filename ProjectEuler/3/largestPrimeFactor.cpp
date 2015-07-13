@@ -1,73 +1,39 @@
-// @author Dustin Specht
-// Question| What is the largest prime factor of the number 600851475143 ?
-#include <cstdio>
-#include <cstdint>
-
-int numberToFactor = 225;
-int factors[512] = {0};
-int numberOfFactorsFound = 1;
-int largestPrimeFactor = 1;
-int primeFactorList[25] = {2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,58,61,67,71,73,79,83,89,97};// Prime factors 1 - 100
-
-bool checkFactorizationCorrect()
+// Question| What is the largest prime factor of the number 600851475143 ?3
+#include<stdio.h>
+int main()
 {
-    bool factorizationIsCorrect = false;
-    int total = 1;
+    // Define Vars
+    long long i, sqi;
+    long long value, startingValue = 600851475143LL;
+    long long max = 0LL;
 
-    printf("numberOfFactorsFound: %d\n", numberOfFactorsFound);
+    //Init base vars
+    i   = 2LL;
+    sqi = 4LL; //i*i
 
-    for(int i = 0; i < numberOfFactorsFound; i++)
+    //Set value to be the starting value (startingValue),
+    //See if the square of i is less then or equal to the value
+    //(2 * i) + 1 + sqi         (starting would be 2*2+2+4 = 4+2+4 = 6+4 = 10
+    //i gets incremented to 3 after it gets used here
+    for(value = startingValue; sqi <= value ; sqi +=  2LL * i++ + 1LL)
     {
-        total = total * factors[i];
-        //printf("%d ", total);
-
-        if(factors[i] > largestPrimeFactor)
+        while(value % i == 0LL)
         {
-            largestPrimeFactor = factors[i];
+            value /= (max=i);
         }
     }
 
-    if (total == numberToFactor)
+    //checks to see if value is not 1 or the starting value
+    if(value != 1LL && value != startingValue)
     {
-        printf("\nSUCCESS: largest prime factor is: %d\n", largestPrimeFactor);
-        factorizationIsCorrect = true;
+        max = value;
     }
 
-    return factorizationIsCorrect;
-}
-
-void main()
-{
-    factors[0] = 1;
-    bool factorNotFound = true;
-    int iter = 0;
-    bool finished = false;
-
-    while(!finished)
+    //if it got to 0 that means the startingValue was prime therfor the largest prime factor
+    if(max == 0LL)
     {
-        while(factorNotFound)
-        {
-            if(numberToFactor % primeFactorList[iter] == 0) // divides evenly
-            {
-                printf("Factor Found %d\n", primeFactorList[iter]);
-
-                factors[numberOfFactorsFound] = primeFactorList[iter];
-
-                numberToFactor = numberToFactor / primeFactorList[iter];
-
-                factorNotFound = false;
-                numberOfFactorsFound += 1;
-                iter = 0;
-            }
-            else
-            {
-                printf("Tried prime number: %d\n", primeFactorList[iter]);
-                iter++;
-            }
-        }
-
-        factorNotFound = true;
-        finished = checkFactorizationCorrect();
+        max = startingValue;
     }
+    printf("%lld\n", max);
+    return 0;
 }
-

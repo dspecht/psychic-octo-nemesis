@@ -4,10 +4,14 @@
 #include <cstdio>
 #include <stdlib.h>
 #include <stdint.h>
+#include <time.h>
 
 typedef uint8_t  u8;
 typedef uint32_t u32;
 typedef uint64_t u64;
+
+clock_t startTime;
+clock_t endTime;
 
 u64 sqrt_u64(u64 n)
 {
@@ -93,9 +97,14 @@ u64 getNPrime(u64 nPrime, u64 limit)
 
 void main()
 {
+    startTime = clock();
     u64 limit = 125000;
     u64 nPrime = 10001;
     u64 primeTarget = getNPrime(nPrime, limit);
 
     printf("nth prime is : %d", primeTarget);
+    endTime = clock();
+
+    float diff((float)endTime - (float)startTime);
+    printf("task completed in %f seconds", float(diff)/CLOCKS_PER_SEC);
 }

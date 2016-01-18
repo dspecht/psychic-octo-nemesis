@@ -1,10 +1,17 @@
 @echo off
 REM build file for System Information C Project, Not working for some dumb reason
 
-IF NOT EXIST build mkdir build
-pushd build
-REM Delete old debug information files
-del *.pdb > NUL 2> NUL
+set buildDIR=\build\
+set outputDirectories=/Fd.%buildDIR% /Fe.%buildDir% /Fo.%buildDir%
+set WarningFlags= -WX -W4 -wd4201 -wd4100 -wd4189 -wd4505
+set Flags= -Zi -EHsc -nologo -fp:fast -Gm- -GR- -EHa- -0d %WarningFlags% %outputDirectories%
 
-cl -nologo -Od -Zi ..\getSysInfo.cpp
-popd
+set LibsLinkedTo= user32.lib
+set LinkerFlags= -incremental:no -opt:ref -NODEFAULTLIB:library %LibsLinkedTo%
+
+
+IF NOT EXIST build mkdir build
+REM Delete old debug information files
+del %buildDIR%*.pdb
+
+cl %Flags% getSysInfo.cpp /link %LinkerFlags%

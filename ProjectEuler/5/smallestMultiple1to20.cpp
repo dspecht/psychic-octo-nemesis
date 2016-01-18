@@ -2,6 +2,9 @@
 //Smallest multiple that is even divisible by all numbers 1 - 20
 
 #include <cstdio>
+#include <time.h>
+clock_t startTime;
+clock_t endTime;
 typedef unsigned int uint;
 
 uint mult = 20;
@@ -21,6 +24,7 @@ bool testMult()
 
 void main()
 {
+    startTime = clock();
     bool finished = false;
     while(!finished)
     {
@@ -34,5 +38,8 @@ void main()
             mult += 20;
         }
     }
+    endTime = clock();
+    float diff((float)endTime - (float)startTime);
+    printf("task completed in %f seconds", float(diff)/CLOCKS_PER_SEC);
 }
 

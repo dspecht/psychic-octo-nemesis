@@ -3,9 +3,13 @@
 //A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99.
 
 #include <cstdio>
+#include <time.h>
+clock_t startTime;
+clock_t endTime;
 
 void main()
 {
+    startTime = clock();
     unsigned int product = 0;
     unsigned int totalproduct = 0;
     unsigned int productArray[6] = {0};
@@ -39,6 +43,10 @@ void main()
             }
         }
     }
+    endTime();
 
     printf("LARGEST PALINDROME: %d", largerstPalindrome);
+
+    float diff((float)endTime - (float)startTime);
+    printf("task completed in %f seconds", float(diff)/CLOCKS_PER_SEC);
 }

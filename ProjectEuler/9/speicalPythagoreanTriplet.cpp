@@ -3,7 +3,7 @@
 clock_t startTime;
 clock_t endTime;
 
-unsigned int MAX = 1000
+unsigned int MAX = 1000;
 
 void main()
 {

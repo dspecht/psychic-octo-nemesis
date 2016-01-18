@@ -31,7 +31,7 @@ void main()
     }
     endTime = clock();
 
-    printf("\nLargest Product: %d", largestProduct);
+    printf("\nLargest Product: %lld", largestProduct);
 
     float diff((float)endTime - (float)startTime);
     printf("\n\ntask completed in %f seconds", float(diff)/CLOCKS_PER_SEC);

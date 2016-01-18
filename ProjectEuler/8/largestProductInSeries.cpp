@@ -2,9 +2,9 @@
 //in a 1000 digit number, find the greatest product of a 13-digit series
 #include <cstdio>
 #include <time.h> // only for timing the time it takes uneeded in true uses
-typedef unsigned int uint;
+typedef unsigned long long uint;
 clock_t startTime;
-clock_t endtime;
+clock_t endTime;
 
 void main()
 {
@@ -15,19 +15,24 @@ void main()
     uint product = 1;
     uint offset = 13;
 
-    for(;offset <= 1000; offset++)
+    while(offset <= 1000)
     {
-        product = (num[offset-13] * num[offset-12] num[offset-11] * num[offset-10] * num[offset-9] \
-                  * num[offset-8] * num[offset-7] * num[offset-6] * num[offset-5] * num[offset-4] \
-                  * num[offset-3] * num[offset-2] * num[offset-1]);
+        product = ( num[offset-1] * num[offset-2] * num[offset-3] * num[offset-4] * num[offset-5]
+                  * num[offset-6] * num[offset-7] * num[offset-8] * num[offset-9] * num[offset-10]
+                  * num[offset-11] * num[offset-12] * num[offset-13]);
+     //   for(int i = 1; i < (offset+1); i++)
+     //   {
+     //       product *= (num[offset - i]);
+     //   }
 
-        if(normal > largestProduct)
-            largestProduct = normal;
+        if(product >= largestProduct)
+            largestProduct = product;
+        offset++;
     }
     endTime = clock();
 
-    printf("Largest Product: %d", largestProduct);
+    printf("\nLargest Product: %d", largestProduct);
 
     float diff((float)endTime - (float)startTime);
-    printf("task completed in %f seconds", float(diff)/CLOCKS_PER_SEC);
+    printf("\n\ntask completed in %f seconds", float(diff)/CLOCKS_PER_SEC);
 }

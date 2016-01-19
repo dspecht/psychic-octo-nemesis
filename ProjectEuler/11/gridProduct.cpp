@@ -52,56 +52,64 @@ void main()
             if(i < 17)
             {
                 tempProduct = (grid[i][j] * grid[i+1][j] * grid[i+2][j] * grid[i+3][j]);
-                if(tempProduct > answer) answer = tempProduct;
+                if(tempProduct > answer)
+                    answer = tempProduct;
                 tempProduct = 1;
             }
             //Up
             if(i > 2)
             {
                 tempProduct = (grid[i][j] * grid[i-1][j] * grid[i-2][j] * grid[i-3][j]);
-                if(tempProduct > answer) answer = tempProduct;
+                if(tempProduct > answer)
+                    answer = tempProduct;
                 tempProduct = 1;
             }
             //Left
             if(j > 2)
             {
                 tempProduct = (grid[i][j] * grid[i][j-1] * grid[i][j-2] * grid[i][j-3]);
-                if(tempProduct > answer) answer = tempProduct;
+                if(tempProduct > answer)
+                    answer = tempProduct;
                 tempProduct = 1;
             }
             //Right
             if(j < 17)
             {
                 tempProduct = (grid[i][j] * grid[i][j+1] * grid[i][j+2] * grid[i][j+3]);
-                if(tempProduct > answer) answer = tempProduct;
+                if(tempProduct > answer)
+                    answer = tempProduct;
                 tempProduct = 1;
             }
             //Up Left
             if(i > 3 &&  j > 3)
             {
                 tempProduct = (grid[i][j] * grid[i-1][j-1] * grid[i-2][j-2] * grid[i-3][j-3]);
-                if(tempProduct > answer) answer = tempProduct;
+                if(tempProduct > answer)
+                    answer = tempProduct;
                 tempProduct = 1;
             }
             //Down Left
             if(i < 17 &&  j > 3)
             {
                 tempProduct = (grid[i][j] * grid[i+1][j-1] * grid[i+2][j-2] * grid[i+3][j-3]);
-                if(tempProduct > answer) answer = tempProduct;
+                if(tempProduct > answer)
+                    answer = tempProduct;
                 tempProduct = 1;
             }
             //Down Right
             if(i < 17 &&  j < 17)
             {
                 tempProduct = (grid[i][j] * grid[i+1][j+1] * grid[i+2][j+2] * grid[i+3][j+3]);
-                if(tempProduct > answer) answer = tempProduct;
+                if(tempProduct > answer)
+                    answer = tempProduct;
                 tempProduct = 1;
             }
             //Up Right
             if(i > 3 &&  j < 17)
             {
                 tempProduct = (grid[i][j] * grid[i-1][j+1] * grid[i-2][j+2] * grid[i-3][j+3]);
-                if(tempProduct > answer) answer = tempProduct;
+                if(tempProduct > answer)
+                    answer = tempProduct;
                 tempProduct = 1;
             }
         }

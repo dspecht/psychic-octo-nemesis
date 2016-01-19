@@ -4,42 +4,31 @@ clock_t startTime;
 clock_t endTime;
 
 unsigned int MAX = 1000;
+unsigned int answer = 0;
+
+unsigned int solve()
+{
+    unsigned int a, b, c;
+    a = 1;
+    for(;a < MAX/3; a++)
+    {
+        for(b=a+1; b < MAX/2; b++)
+        {
+            c = MAX - a - b;
+            if((a*a) + (b*b) == (c*c))
+                return(a*b*c);
+        }
+    }
+    return 0;
+}
 
 void main()
 {
     startTime = clock();
-
-    unsigned int a, b, c;
-    a = 1; b = 2; c = 3;
-    unsigned int answer = 0;
-    while(a+b+c != MAX && a+b+c <= MAX
-    {
-        if(a < b && b < c)
-        {
-            while(b < MAX-2)
-            {
-                while(c < MAX-3)
-                {
-                    if(a+b+c == MAX)
-                    {
-                        answer = a*b*c;
-                        continue;
-                    }
-                    c++;
-                }
-                c = (b+2);
-                b++;
-            }
-            b = (a+2);
-            a++;
-        }
-    }
-
-    endTime = clock()
-
-    if(answer)
-        printf("Answer is: %d", answer);
+    answer = solve();
+    endTime = clock();
+    printf("\nAnswer is: %d", answer);
 
     float diff((float)endTime - (float)startTime);
-    printf("task completed in %f seconds", float(diff)/CLOCKS_PER_SEC);;
+    printf("\n\ntask completed in %f seconds", float(diff)/CLOCKS_PER_SEC);;
 }

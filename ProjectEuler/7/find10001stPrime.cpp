@@ -20,7 +20,7 @@ u64 sqrt_u64(u64 n)
 
     while((1<<shift) < n) shift += 1;
     res = (1<<((shift>>1) +1));
-    while (1)
+    for(;;)
     {
         s = (n/res +res)/2;
         if (s >= res) return res;
@@ -102,9 +102,9 @@ void main()
     u64 nPrime = 10001;
     u64 primeTarget = getNPrime(nPrime, limit);
 
-    printf("nth prime is : %d", primeTarget);
+    printf("\nnth prime is : %lld", primeTarget);
     endTime = clock();
 
     float diff((float)endTime - (float)startTime);
-    printf("task completed in %f seconds", float(diff)/CLOCKS_PER_SEC);
+    printf("\n\ntask completed in %f seconds", float(diff)/CLOCKS_PER_SEC);
 }

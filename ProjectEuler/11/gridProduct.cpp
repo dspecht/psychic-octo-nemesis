@@ -81,7 +81,7 @@ void main()
                 tempProduct = 1;
             }
             //Up Left
-            if(i > 3 &&  j > 3)
+            if(i > 3 && j > 3)
             {
                 tempProduct = (grid[i][j] * grid[i-1][j-1] * grid[i-2][j-2] * grid[i-3][j-3]);
                 if(tempProduct > answer)
@@ -89,7 +89,7 @@ void main()
                 tempProduct = 1;
             }
             //Down Left
-            if(i < 17 &&  j > 3)
+            if(i < 17 && j > 3)
             {
                 tempProduct = (grid[i][j] * grid[i+1][j-1] * grid[i+2][j-2] * grid[i+3][j-3]);
                 if(tempProduct > answer)
@@ -97,7 +97,7 @@ void main()
                 tempProduct = 1;
             }
             //Down Right
-            if(i < 17 &&  j < 17)
+            if(i < 17 && j < 17)
             {
                 tempProduct = (grid[i][j] * grid[i+1][j+1] * grid[i+2][j+2] * grid[i+3][j+3]);
                 if(tempProduct > answer)
@@ -105,7 +105,7 @@ void main()
                 tempProduct = 1;
             }
             //Up Right
-            if(i > 3 &&  j < 17)
+            if(i > 3 && j < 17)
             {
                 tempProduct = (grid[i][j] * grid[i-1][j+1] * grid[i-2][j+2] * grid[i-3][j+3]);
                 if(tempProduct > answer)

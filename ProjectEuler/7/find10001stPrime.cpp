@@ -95,7 +95,7 @@ u64 getNPrime(u64 nPrime, u64 limit)
     return prime;
 }
 
-void main()
+int main()
 {
     startTime = clock();
     u64 limit = 125000;
@@ -107,4 +107,5 @@ void main()
 
     float diff((float)endTime - (float)startTime);
     printf("\n\ntask completed in %f seconds", float(diff)/CLOCKS_PER_SEC);
+    return 0;
 }

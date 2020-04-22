@@ -1,0 +1,1 @@
+cl -nologo gridProduct.cpp
